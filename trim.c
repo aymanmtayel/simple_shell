@@ -20,6 +20,7 @@ char *trim(char *str)
 	if (str_trimmed == NULL)
 	{
 		perror("malloc");
+		free(str);
 		return (NULL);
 	}
 	_strncpy(str_trimmed, str + i, j - i + 1);
